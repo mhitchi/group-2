@@ -7,6 +7,12 @@ offwhite: #E6E6E6;
 offblack: #1F1F1F
 */
 
+body {
+  background-image: url("../images/bar-pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .hidden {
   display: none;
 }
