@@ -1,0 +1,72 @@
+<div class="container">
+  {{!-- nav bar --}}
+  <ul class="nav nav-pills">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li><a href="#">+</a></li>
+    <li><a href="#">My Recipes</a></li>
+  </ul>
+  {{!-- buttons --}}
+  <div class="row">
+    <div class="button-row">
+      <div class="col-6 get-col">
+
+    </div>
+    <div class="col-6 post-col">
+
+    </div>
+    </div>
+  </div>
+
+  {{!-- pick your poison --}}
+  <div class="row hidden">
+    <div class="col-12">
+      <div class="pick-poison-div">
+        <h2>Pick your poison.</h2>
+      </div>
+    </div>
+    <div class="col-12">
+      {{!-- dropdown of alcohols --}}
+      <ul class="dropdown-menu alcohol-menu" role="menu" aria-labelledby="dropdownMenu">
+        <li><a tabindex="-1" href="#">Vodka</a></li>
+        <li><a tabindex="-1" href="#">Whiskey</a></li>
+        <li><a tabindex="-1" href="#">Tequila</a></li>
+        <li><a tabindex="-1" href="#">Gin</a></li>
+        <li><a tabindex="-1" href="#">Rum</a></li>
+      </ul>
+    </div>
+  </div>
+
+  {{!-- display all recipes --}}
+  <div class="recipe-list hidden">
+    {{#each recipe}}
+      <div class="animated row event-row col-12 fadeInUp hidden">
+      {{!-- recipe info --}}
+      {{this.name}}
+    </div>
+    {{/each}}
+  </div>
+
+  {{!-- form --}}
+  <div class="row hidden">
+    <div class="col-12">
+      <div class="form">
+        {{!-- form --}}
+      </div>
+    </div>
+  </div>
+
+  {{!-- footer --}}
+  <div class="row">
+    <div class="col-12">
+        <div class="footer">
+          <a href="https://github.com/vormc2005">Ken Shiriashi</a></br>
+          <a href="https://github.com/aya828">Aya</a></br>
+          <a href="https://github.com/MichaelRempe">Michael Rempe</a></br>
+          <a href="https://github.com/mhitchi/">May Hitchings</a>
+          <p>February 2020</p>
+        </div>
+    </div>
+  </div>
+</div>

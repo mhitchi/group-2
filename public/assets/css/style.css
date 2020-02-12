@@ -1,0 +1,127 @@
+/* colors:
+red: #E4424D;
+pink: #EFAAAF;
+teal: #46717A;
+yellow: #E8BC65;
+offwhite: #E6E6E6;
+offblack: #1F1F1F
+*/
+
+.hidden {
+  display: none;
+}
+
+.get-btn {
+  background-color: #F78166;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 30px;
+  float: right;
+  margin-right: 5px;
+  margin-top: -34px;
+  position: relative; 
+  z-index: 2;
+}
+
+.get-btn:hover {
+  cursor: pointer;
+  background-color: #ffa428;
+}
+
+.post-btn {
+  background-color: #F78166;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 30px;
+  float: right;
+  margin-right: 5px;
+  margin-top: -34px;
+  position: relative; 
+  z-index: 2;
+}
+
+.post-btn:hover {
+  cursor: pointer;
+  background-color: #ffa428;
+}
+
+.menu {
+  margin: auto;
+  width: 33%;
+  /* border: 1px solid white; */
+  border: 1px solid #E3A899;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: white;
+  /* background-color: #E3A899; */
+}
+
+.menu a {
+  color: #F78166;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  z-index: 1 !important;
+}
+
+@media (min-width: 500px) {
+  .menu a:hover {
+    color: #ffa428;
+  }
+}
+@media (min-width: 992px) {
+  .menu a:hover {
+    color: #ffa428;
+    /* font-size: 1.2em; */
+  }
+}
+
+@media (min-width: 500px) {
+  .recipe-list {
+    width: 100%;
+    margin: 0px auto 5em auto;
+    z-index: 0;
+  }
+}
+@media (min-width: 992px) {
+  .recipe-list {
+    width: 80%;
+    margin: 0px auto 5em auto;
+    z-index: 0;
+  }
+}
+
+.recipe-row {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px auto 0px auto;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.recipe-row:hover {
+  margin-left: 10px;
+}
+
+.footer {
+  text-align: right;
+  margin-right: -5em;
+  margin-bottom: 1em;
+}
+
+.footer a {
+  font-family: 'Rubik' , sans-serif;
+  font-size: 1.25em;
+  color: #606060;
+}
+
+.footer a:hover {
+  color: #303030;
+  text-decoration: none;
+}
