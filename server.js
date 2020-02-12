@@ -1,4 +1,4 @@
-const db = require("./models");
+const db = require("./app/models");
 const express = require("express");
 
 const PORT = process.env.PORT || 3000;
@@ -9,10 +9,10 @@ app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
 
 //static directory
-app.use(express.static("../public"));
+app.use(express.static("./app/static"));
 
 //routes
-require("./routes/api-routes.js")(app);
+require("./app/routes/api-routes.js")(app);
 
 //wrap app.listen with db.sequelize to make sure database is ready
 db.sequelize.sync({ force:true }).then(function(){
