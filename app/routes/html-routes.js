@@ -9,7 +9,7 @@ module.exports = function (app) {
     res.render("form");
   });
   // DB Query View
-  app.get("alcohol", (req, res) => {
+  app.get("recipes", (req, res) => {
     res.render("recipes")
   });
 }
