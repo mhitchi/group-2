@@ -2,16 +2,28 @@
 //Create Recipe Model for DB
 module.exports = function(sequelize, Datatypes){
   var Recipe = sequelize.define("Recipe", {
-    name: Datatypes.STRING,
-    main_alc: Datatypes.STRING,
+    name: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
+    main_alc: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
     main_oz: Datatypes.INTEGER,
-    ing1: Datatypes.STRING,
+    ing1: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
     ing2: Datatypes.STRING,
     ing3: Datatypes.STRING,
     ing4: Datatypes.STRING,
     ing5: Datatypes.STRING,
     ing6: Datatypes.STRING,
-    instructions: Datatypes.STRING
+    instructions: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
   });
   return Recipe;
 }
