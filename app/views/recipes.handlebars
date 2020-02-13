@@ -1,28 +1,29 @@
 <div class="container">
   <div class="row">
     {{!-- nav bar --}}
-    <ul class="nav nav-pills">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
-      <li><a href="#">+</a></li>
-      <li><a href="#">My Recipes</a></li>
-    </ul>
+  <ul class="nav nav-pills">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li><a href="#">+</a></li>
+    <li><a href="#">My Recipes</a></li>
+  </ul>
   </div>
 
-  {{!-- buttons --}}
   <div class="row">
-    <div class="button-row">
-      <div class="col-6 get-col">
-
-    </div>
-    <div class="col-6 post-col">
-
-    </div>
+    {{!-- display all recipes --}}
+    <div class="recipe-list">
+      {{!-- TRIED {{#each Recipes}} --}}
+      {{#each recipe}}
+        <div class="animated row event-row col-12 fadeInUp hidden">
+        {{!-- recipe info --}}
+        {{this.name}}
+      </div>
+      {{/each}}
     </div>
   </div>
 
-  {{!-- footer --}}
+   {{!-- footer --}}
   <div class="row">
     <div class="col-12">
         <div class="footer">
