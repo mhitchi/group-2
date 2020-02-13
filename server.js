@@ -1,5 +1,7 @@
 const db = require("./app/models");
-const express = require("express");
+const express = require("express");//Express Node Package to create back-end server/routes/control-flow
+const exphbs = require("express-handlebars");// Handle Bars - Templating Engine deliver/format data to front end
+const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -26,7 +28,7 @@ console.log(path.join(__dirname, "/app", "/views"))
 // console.log(path.resolve(__dirname, "/app", "/views"))
 
 //static directory
-app.use(express.static("./app/static"));
+app.use(express.static("./app/static/assets"));
 
 //routes
 require("./app/routes/api-routes.js")(app);
