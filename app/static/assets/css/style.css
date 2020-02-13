@@ -17,6 +17,15 @@ body {
   display: none;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .button-row {
   width: 100%;
   margin: 12em auto 10em auto;
