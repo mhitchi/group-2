@@ -5,7 +5,9 @@ module.exports = function (app) {
 
   //GET ALL RECIPES
   app.get('/api/recipes/all', function (req, res) {
-    
+    db.Recipes.findAll({}).then((data)=>{
+      console.log(data);
+    })
   });
 
   //GET RECIPES BY MAIN ALC
