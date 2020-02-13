@@ -1,5 +1,15 @@
-module.exports = function (app){
-    app.get('/', function(req, res){
-      res.render("index");
-    });
-  }
+module.exports = function (app) {
+
+  //Landing Page View
+  app.get('/', function (req, res) {
+    res.render("index");
+  });
+  // Form View
+  app.get("/form", (req, res) => {
+    res.render("form");
+  });
+  // DB Query View
+  app.get("alcohol", (req, res) => {
+    res.render("recipes")
+  });
+}

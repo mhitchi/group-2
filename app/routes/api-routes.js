@@ -3,18 +3,19 @@ let db = require("../models");
 
 module.exports = function (app) {
 
-  //GET ALL RECIPES
+  //GET ALL RECIPES VIEW
   app.get('/api/recipes/all', function (req, res) {
     db.Recipes.findAll({}).then((data)=>{
       console.log(data);
+      //res.render(recipes)
     })
   });
-
-  //GET RECIPES BY MAIN ALC
+ 
+  // GET SPECIFIC RECIPE
   app.get('/api/recipes/:main_alc', function (req, res) {
-    // res.render("index");
+    res.render("recipes");
   });
-
+  
   //POST NEW RECIPE
   app.post("/api/recipes", (req, res) => {
     console.log(req.body);
