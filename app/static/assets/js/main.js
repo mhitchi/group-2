@@ -1,23 +1,25 @@
-//TODO ajax calls
-//TODO onbuttonclicks
+$(document).ready(function(){
+  //TODO ajax calls
+  //TODO onbuttonclicks
 
-// get DOM elements
-const $viewBtn = $('.view-btn');
-const $addBtn = $('.add-btn');
+  // get DOM elements
+  const $viewBtn = $('.view-btn');
+  const $addBtn = $('.add-btn');
 
-
-$viewBtn.on('click', function() {
-  //go to recipes page
-  $.ajax({
-    // TODO MAYBE DIFFERENT
-    url: '/api/recipes/all',
-    dataType: 'json',
-    type: 'GET'
-  }).then(function(response) {
-    
+  $viewBtn.on('click', function() {
+    // console.log("getting recipes");
+    // //go to recipes page
+    // $.ajax({
+    //   // TODO MAYBE DIFFERENT
+    //   // url: 'http://localhost:8080/recipes',
+    //   url: 'http://localhost:8080/recipes',
+    //   method: 'GET'
+    // }).then(function(response) {
+    //   console.log(response)
+    // });
   });
-});
 
-$addBtn.on('click', function() {
-  //go to forms page
-});
+  $addBtn.on('click', function() {
+    //go to forms page
+  });
+})
