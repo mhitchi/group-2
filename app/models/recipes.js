@@ -2,6 +2,12 @@
 //Create Recipe Model for DB
 module.exports = function(sequelize, Datatypes){
   var Recipe = sequelize.define("Recipe", {
+    id: {
+      type: Datatypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     name: {
       type: Datatypes.STRING,
       allowNull: false
@@ -23,7 +29,9 @@ module.exports = function(sequelize, Datatypes){
     instructions: {
       type: Datatypes.STRING,
       allowNull: false
-    },
+    }
+  },{
+    timestamps:false
   });
   return Recipe;
 }
