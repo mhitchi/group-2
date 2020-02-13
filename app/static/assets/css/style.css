@@ -17,7 +17,12 @@ body {
   display: none;
 }
 
-.get-btn {
+.button-row {
+  width: 100%;
+  margin: 12em auto 10em auto;
+}
+
+/* .view-btn {
   background-color: #F78166;
   color: white;
   border: none;
@@ -29,14 +34,22 @@ body {
   margin-top: -34px;
   position: relative; 
   z-index: 2;
+} */
+.view-btn {
+  background-color: #E4424D;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  position: relative; 
+  margin-right: 5px;
 }
 
-.get-btn:hover {
+.view-btn:hover {
   cursor: pointer;
-  background-color: #ffa428;
+  background-color: #EFAAAF;
 }
 
-.post-btn {
+/* .add-btn {
   background-color: #F78166;
   color: white;
   border: none;
@@ -48,11 +61,19 @@ body {
   margin-top: -34px;
   position: relative; 
   z-index: 2;
+} */
+.add-btn {
+  background-color: #E4424D;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  position: relative; 
+  margin-left: 5px;
 }
 
-.post-btn:hover {
+.add-btn:hover {
   cursor: pointer;
-  background-color: #ffa428;
+  background-color: #EFAAAF;
 }
 
 .menu {
@@ -119,15 +140,16 @@ body {
   text-align: right;
   margin-right: -5em;
   margin-bottom: 1em;
+  margin-top: 10em;
 }
 
 .footer a {
   font-family: 'Rubik' , sans-serif;
   font-size: 1.25em;
-  color: #606060;
+  color: #E3A899;
 }
 
 .footer a:hover {
-  color: #303030;
+  color: white;
   text-decoration: none;
 }

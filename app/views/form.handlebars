@@ -13,22 +13,61 @@
   {{!-- form --}}
   <div class="row">
     <div class="col-12">
-      <div class="form">
-        {{!-- form --}}
-      </div>
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
     </div>
   </div>
 
   {{!-- footer --}}
-  <div class="row">
-    <div class="col-12">
-        <div class="footer">
-          <a href="https://github.com/vormc2005">Ken Shiriashi</a></br>
-          <a href="https://github.com/aya828">Aya Yoshida</a></br>
-          <a href="https://github.com/MichaelRempe">Michael Rempe</a></br>
-          <a href="https://github.com/mhitchi/">May Hitchings</a>
-          <p>February 2020</p>
-        </div>
+  <div class="footer">
+    <div class="row">
+      <div class="col-3 text-center">
+        <a href="https://github.com/vormc2005">Ken Shiriashi</a>
+      </div>
+      <div class="col-3 text-center">
+        <a href="https://github.com/aya828">Aya Yoshida</a>
+      </div>
+      <div class="col-3 text-center">
+        <a href="https://github.com/MichaelRempe">Michael Rempe</a>
+      </div>
+      <div class="col-3 text-center">
+        <a href="https://github.com/mhitchi/">May Hitchings</a>
+      </div>
+      
+    </div> {{!-- /row --}}
+    <div class="row">
+      <div class="col-12">
+        {{!-- TODO NOT SHOWING --}}
+        <p>February 2020</p>
+      </div>
     </div>
-  </div>
+  </div>{{!-- /footer --}}
 </div>
