@@ -147,6 +147,11 @@ a:hover {
   margin-left: 10px;
 }
 
+form {
+  margin: 12em auto 10em auto;
+  width: 50%
+}
+
 .footer {
   text-align: right;
   margin-right: -5em;
