@@ -10,16 +10,26 @@ const app = express();
 app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
 
-//SHOULD BE SETTING VIEW PATH TO __dirname/app/views (right now it justlooking for __dirname/views)
-let viewsPath = path.join(__dirname, "/app", "/views")
+// // TRIED BASIC:
+// app.engine('.handlebars', exphbs({extname: '.handlebars'}));
+// app.set('view engine', '.handlebars');
+
+// TRIED path.join, threw ENOENT
+let viewsPath = path.resolve(__dirname, "/app", "/views")
 app.set('views', viewsPath);
-// Allows app to implement handlebars to template data
-app.engine("handlebars", exphbs({ defaultLayout: "main", layoutsDir: viewsPath + '/layouts' })); 
+app.engine("handlebars", exphbs({ defaultLayout: "main", layoutsDir: viewsPath + '/layouts'})); 
 app.set("view engine", "handlebars");
 console.log(path.join(__dirname, "/app", "/views"))
 
+// Allows app to implement handlebars to template data
+// TRIED .handlebars, tried path.resolve, tried , extname: '.handlebars' 
+// app.engine(".handlebars", exphbs({ defaultLayout: "main", layoutsDir: viewsPath + '/layouts', extname: '.handlebars' })); 
+// app.set("view engine", ".handlebars");
+// console.log(path.resolve(__dirname, "/app", "/views"))
+
+
 //static directory
-app.use(express.static("./app/static"));
+app.use(express.static("./app/static/assets"));
 
 //routes
 require("./app/routes/api-routes.js")(app);
