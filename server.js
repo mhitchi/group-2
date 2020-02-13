@@ -14,8 +14,18 @@ app.use(express.json());
 let viewsPath = path.join(__dirname, "/app", "/views")
 app.set('views', viewsPath);
 // Allows app to implement handlebars to template data
-app.engine("handlebars", exphbs({ defaultLayout: "main", layoutsDir: viewsPath + '/layouts' })); 
-app.set("view engine", "handlebars");
+
+// TRIED .handlebars, tried path.resolve, tried , extname: '.handlebars' 
+app.engine(".handlebars", exphbs({ defaultLayout: "main", layoutsDir: viewsPath + '/layouts', extname: '.handlebars' })); 
+app.set("view engine", ".handlebars");
+// console.log(path.resolve(__dirname, "/app", "/views"))
+
+//static directory
+app.use(express.static("./app/static/assets"));
+
+//routes
+require("./app/routes/api-routes.js")(app);
+
 
 console.log(path.join(__dirname, "/app", "/views"))
 //Incorporate static directory
