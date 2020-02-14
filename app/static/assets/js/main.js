@@ -48,16 +48,19 @@ $(document).ready(function(){
       instructions: $("#instructionsInput").val()
     };
     console.log(newRecipe);
+    
+    //get ingredient val
+    //post recipe to db
+    $.ajax({
+      url: 'http://localhost:8080/api/recipes',
+      method: 'POST',
+      data: {
+        newRecipe
+      }
+    }).then(function(response) {
+      console.log(response);
+      console.log("adding recipe");
+    });
   })
-    // Send the POST request.
-    // $.ajax(“/api/form”, {
-    //   type: “POST”,
-    //   data: newRecipe
-    // }).then(
-    //   function() {
-    //     console.log(“created new recipe”);
-    //     // Reload the page to get the updated list
-    //     // location.reload();
-    //   }
-    // );
+    
 })
