@@ -20,20 +20,20 @@ module.exports = function (app) {
   //POST NEW RECIPE
   app.post("/api/recipes", (req, res) => {
     console.log(req.body);
-    db.Todo.create({
-      name: req.body.whatever,
-      main_alc: req.body.whatever,
-      main_oz: req.body.whatever,
-      ing1: req.body.whatever,
-      ing2: req.body.whatever,
-      ing3: req.body.whatever,
-      ing4: req.body.whatever,
-      ing5: req.body.whatever,
-      ing6: req.body.whatever,
-      instructions: req.body.whatever
+    db.Recipe.create({
+      name: req.body.newRecipe.name,
+      main_alc: req.body.newRecipe.main_alc,
+      main_oz: req.body.newRecipe.main_oz,
+      ing1: req.body.newRecipe.ing1,
+      ing2: req.body.newRecipe.ing1,
+      ing3: req.body.newRecipe.ing1,
+      ing4: req.body.newRecipe.ing1,
+      ing5: req.body.newRecipe.ing1,
+      ing6: req.body.newRecipe.ing1,
+      instructions: req.body.newRecipe.instructions
 
-    }).then((newRecipe) => {
-      console.log(newRecipe);
+    }).then((newDrink) => {
+      console.log(newDrink);
       // res.json(dbTodo);
     });
   });

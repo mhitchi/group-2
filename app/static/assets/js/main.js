@@ -48,16 +48,32 @@ $(document).ready(function(){
       instructions: $("#instructionsInput").val()
     };
     console.log(newRecipe);
+
+    //get ingredient val
+    //post recipe to db
+    $.ajax({
+      url: 'http://localhost:8080/api/recipes',
+      method: 'POST',
+      data: {
+        newRecipe
+      }
+    }).then(function(response) {
+      console.log(response);
+      console.log("adding recipe");
+    });
+    drinkImg();
   })
-    // Send the POST request.
-    // $.ajax(“/api/form”, {
-    //   type: “POST”,
-    //   data: newRecipe
-    // }).then(
-    //   function() {
-    //     console.log(“created new recipe”);
-    //     // Reload the page to get the updated list
-    //     // location.reload();
-    //   }
-    // );
+
+  function drinkImg() {
+    $.ajax({
+      url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka',
+      method: 'GET',
+      data: {
+        // newRecipe
+      }
+    }).then(function(response) {
+      console.log(response);
+    });
+  }
+    
 })
