@@ -7,14 +7,18 @@ module.exports = function (app) {
   app.get('/recipes', function (req, res) {
     db.Recipe.findAll({}).then((data)=>{
       let formattedData = data;
-      // res.render('recipes', {recipes: formattedData[0].dataValues.name})
       res.render('recipes', {recipes: formattedData})
     })
   });
  
   // GET SPECIFIC RECIPE
-  app.get('/api/recipes/:main_alc', function (req, res) {
-    res.render("recipes");
+  app.get('/recipes/:main_alc', function (req, res) {
+    let alcohol= req.params.main_alc;
+    db.Recipe.findAll({where:{main_alc:alcohol}}).then((data)=>{
+      let formattedData = data;
+      res.render('recipes', {recipes: formattedData})
+    })
+    // res.render("recipes");
   });
   
   //POST NEW RECIPE
