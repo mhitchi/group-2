@@ -14,12 +14,13 @@
     {{!-- display all recipes --}}
     <div class="recipe-list">
       {{!-- TRIED {{#each Recipes}} --}}
-      {{#each recipe}}
-        <div class="animated row event-row col-12 fadeInUp hidden">
+      {{#each recipes}}
+        <div class="animated row event-row col-12 fadeInUp">
         {{!-- recipe info --}}
-        {{this.name}}
-      </div>
+        <h1>{{this.dataValues.name}}</h1>
       {{/each}}
+      </div>
+      {{!-- {{/each}} --}}
     </div>
   </div>
 
