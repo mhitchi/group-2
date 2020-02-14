@@ -48,7 +48,7 @@ $(document).ready(function(){
       instructions: $("#instructionsInput").val()
     };
     console.log(newRecipe);
-    
+
     //get ingredient val
     //post recipe to db
     $.ajax({
@@ -61,6 +61,19 @@ $(document).ready(function(){
       console.log(response);
       console.log("adding recipe");
     });
+    drinkImg();
   })
+
+  function drinkImg() {
+    $.ajax({
+      url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka',
+      method: 'GET',
+      data: {
+        // newRecipe
+      }
+    }).then(function(response) {
+      console.log(response);
+    });
+  }
     
 })
