@@ -19,39 +19,25 @@
     </div>
     <div class="row">
       <div class="col-6"> 
-        <ul class="animated nav nav-pills">
-          <li class="nav-item dropdown menu mainAlc-menu">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Alcohol</a>
-            <div class="dropdown-menu alcohol-menu">
-              <button class="dropdown-item alcohol-item" id="vodka">
-                Vodka
-              </button>
-              <button class="dropdown-item alcohol-item" id="bourbon">
-                Bourbon
-              </button>
-              <button class="dropdown-item alcohol-item" id="scotch">
-                Scotch
-              </button>
-              <button class="dropdown-item alcohol-item" id="tequila">
-                Tequila
-              </button>
-              <button class="dropdown-item alcohol-item" id="gin">
-                Gin
-              </button>
-              <button class="dropdown-item alcohol-item" id="rum">
-                Rum
-              </button>
-            </div>
-          </li>
-        </ul>
+        <select class="alcohol">
+          <option selected id="mainAlc" value="base">Please Select Alcohol</option>
+          <option id="vodka" value="vodka">Vodka</option>
+          <option id="bourbon" value="bourbon">Bourbon</option>
+          <option id="scotch" value="scotch">Scotch</option>
+          <option id="tequila" value="tequila">Tequila</option>
+          <option id="gin" value="gin">Gin</option>
+          <option id="rum" value="rum">Rum</option>
+        </select>
       </div>
-      
+    </div>
+  
       <div class="col-6">
         <ul class="animated nav nav-pills">
           <li class="nav-item dropdown menu ingredients-list">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingredients</a>
             <div class="dropdown-menu ingredients-div">
-              <input class="ingInput" type="text" placeholder="2oz lime juice" id="ing1">
+              <input class="ingInput" type="text" placeholder="2oz lime juice" id="mainOz">
+              <input class="ingInput" type="text" placeholder="" id="ing1">
               <input class="ingInput" type="text" placeholder="" id="ing2">
               <input class="ingInput" type="text" placeholder="" id="ing3">
               <input class="ingInput" type="text" placeholder="" id="ing4">
