@@ -15,7 +15,8 @@ $(document).ready(function(){
   const $addBtn = $('.add-btn');
 
   $addBtn.on('click', function() {
-    
+    //get main alc id
+    //get ingredient val
     //post recipe to db
   });
 })
