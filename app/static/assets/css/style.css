@@ -89,17 +89,17 @@ a:hover {
 
 .menu {
   margin: auto;
-  width: 33%;
-  /* border: 1px solid white; */
+  width: 90%;
+  display: inline;
+  border-radius: 7px;
   border: 1px solid #E3A899;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
   background-color: white;
   /* background-color: #E3A899; */
 }
 
 .menu a {
-  color: #F78166;
+  /* color: #F78166; */
+  color: grey;
   text-align: center;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
@@ -149,7 +149,39 @@ a:hover {
 
 form {
   margin: 12em auto 10em auto;
-  width: 50%
+  width: 50%;
+}
+
+.form-control {
+  display: inline;
+}
+
+.instructions-row {
+  margin-top: 1em;
+}
+
+.alcohol-menu {
+  height: 128px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.ingInput {
+  width: 100%;
+}
+
+.nav-link:active {
+  background-color: green;
+}
+
+.dropdown-item {
+  width: 100%;
+}
+
+.add-recipe-btn {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #E8BC65;
 }
 
 .footer {
@@ -162,10 +194,10 @@ form {
 .footer a {
   font-family: 'Rubik' , sans-serif;
   font-size: 1.25em;
-  color: #E3A899;
+  color: #46717A;
 }
 
 .footer a:hover {
-  color: white;
+  color: #E3A899;
   text-decoration: none;
 }
