@@ -12,10 +12,16 @@ $(document).ready(function(){
   const $ing5 = $('#ing5');
   const $ing6 = $('#ing6');
   const $instructions = $('#instructionsInput');
-  const $addBtn = $('.add-btn');
+  const $addBtn = $('.add-recipe-btn');
+  let alcName = "";
+
+  $mainAlc.on('click', function() {
+    alcName = this.id;
+  });
 
   $addBtn.on('click', function() {
     //get main alc id
+    console.log('clicked add');
     //get ingredient val
     //post recipe to db
   });
