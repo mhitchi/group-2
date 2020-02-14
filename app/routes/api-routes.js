@@ -4,10 +4,11 @@ let db = require("../models");
 module.exports = function (app) {
 
   //GET ALL RECIPES VIEW
-  app.get('/api/recipes/all', function (req, res) {
-    db.Recipes.findAll({}).then((data)=>{
-      console.log(data);
-      //res.render(recipes)
+  app.get('/recipes', function (req, res) {
+    db.Recipe.findAll({}).then((data)=>{
+      let formattedData = data;
+      // res.render('recipes', {recipes: formattedData[0].dataValues.name})
+      res.render('recipes', {recipes: formattedData})
     })
   });
  
