@@ -227,3 +227,7 @@ select {
   color: white;
   margin-right: 1em;
 }
+
+#alcoholSearch {
+  text-align: center;
+}
