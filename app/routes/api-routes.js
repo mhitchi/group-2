@@ -29,11 +29,11 @@ module.exports = function (app) {
       main_alc: req.body.newRecipe.main_alc,
       main_oz: req.body.newRecipe.main_oz,
       ing1: req.body.newRecipe.ing1,
-      ing2: req.body.newRecipe.ing1,
-      ing3: req.body.newRecipe.ing1,
-      ing4: req.body.newRecipe.ing1,
-      ing5: req.body.newRecipe.ing1,
-      ing6: req.body.newRecipe.ing1,
+      ing2: req.body.newRecipe.ing2,
+      ing3: req.body.newRecipe.ing3,
+      ing4: req.body.newRecipe.ing4,
+      ing5: req.body.newRecipe.ing5,
+      ing6: req.body.newRecipe.ing6,
       instructions: req.body.newRecipe.instructions
 
     }).then((newDrink) => {
