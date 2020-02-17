@@ -9,6 +9,8 @@ $(document).ready(function(){
   const $addBtn = $('.add-recipe-btn');
   let alcName = "";
   let newRecipe = {};
+  let searchedAlcohol = [];
+  let _drinks;
 
   $mainAlc.on('click', function() {
     alcName = this.id;
@@ -60,6 +62,7 @@ $(document).ready(function(){
 
   $("#searchAlcBtn").on("click", function(event) {
     event.preventDefault();
+    searchedAlcohol = [];
 
     console.log("click");
 
@@ -70,16 +73,16 @@ $(document).ready(function(){
     $.ajax({
       url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchAlc,
       method: 'GET',
-      data: {
-        // alcohol: mainAlcohol
-      }
     }).then(function(response) {
-      _drinks = response.drinks;
+      let _drinks = response.drinks;
+      // console.log(response);
       for(let i=0; i<_drinks.length; i++){
-        console.log(_drinks[i].strDrinkThumb);
+        // console.log(_drinks);
+        searchedAlcohol.push(_drinks[i].strDrinkThumb);
       }
-      
+      console.log(searchedAlcohol);
     });
+
 
   })
 
