@@ -27,13 +27,13 @@
     
   <div class="row">
     {{!-- display all recipes --}}
-    <div class="recipe-list">
+    <div class="recipe-list col-12">
       {{!-- TRIED {{#each Recipes}} --}}
       {{#each recipes}}
-      <div class="animated row recipe-row col-12 fadeInUp">
+      <div class="animated recipe-row fadeInUp">
         {{!-- recipe info --}}
         <div class="card">
-          <div class="row no-gutters">
+          {{!-- <div class="row no-gutters"> --}}
             <div class="col-md-4">
               <img src="" class="card-img" alt="...">
             </div>
@@ -48,16 +48,14 @@
                     <p>{{this.dataValues.ing4}}</p>
                     <p>{{this.dataValues.ing5}}</p>
                     <p>{{this.dataValues.ing6}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>{{!--card-body --}}
+              </div>{{!--col-md-8 --}}
+            {{!-- </div> --}}{{!-- no-gutters --}}
+          </div>{{!--card --}}
+        </div>{{!-- animated --}}
         {{/each}}
-      </div>
-    </div>
-  </div>
+      </div>{{!-- recipe-list --}}
+    </div>{{!-- row --}}
   <div class="footer">
     <div class="row">
       <div class="col-3 text-center">
