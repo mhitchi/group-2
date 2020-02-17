@@ -58,16 +58,30 @@ $(document).ready(function(){
     drinkImg();
   })
 
-  function drinkImg() {
+  $("#searchAlcBtn").on("click", function(event) {
+    event.preventDefault();
+
+    console.log("click");
+
+    let searchAlc = $(".alcoholSearch option:selected").text();
+    console.log(searchAlc);
+
+    
     $.ajax({
-      url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka',
+      url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchAlc,
       method: 'GET',
       data: {
-        // newRecipe
+        // alcohol: mainAlcohol
       }
     }).then(function(response) {
-      console.log(response);
+      _drinks = response.drinks;
+      for(let i=0; i<_drinks.length; i++){
+        console.log(_drinks[i].strDrinkThumb);
+      }
+      
     });
-  }
+
+  })
+
     
 })
