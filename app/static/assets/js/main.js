@@ -7,21 +7,10 @@ $(document).ready(function(){
   const $mainAlc = $('.alcohol-item');
   const $instructions = $('#instructionsInput');
   const $addBtn = $('.add-recipe-btn');
-  let alcName = "";
-  let newRecipe = {};
-  let searchedAlcohol = [];
-  let _drinks =[];
 
   $mainAlc.on('click', function() {
     alcName = this.id;
   });
-
-  // $addBtn.on('click', function() {
-  //   //get main alc id
-  //   console.log('clicked add');
-  //   //get ingredient val
-  //   //post recipe to db
-  // });
 
   $addBtn.on("click", function(event) {
     // Make sure to preventDefault on a submit event.
@@ -62,31 +51,16 @@ $(document).ready(function(){
 
   $("#searchAlcBtn").on("click", function(event) {
     event.preventDefault();
-    searchedAlcohol = [];
-
-    console.log("click");
-
     let searchAlc = $(".alcoholSearch option:selected").text();
-    console.log(searchAlc);
+    $("#view").load("http://localhost:8080/recipes/"+searchAlc);
 
-    
     $.ajax({
       url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchAlc,
       method: 'GET',
     }).then(function(response) {
-      _drinks = response.drinks;
-      // console.log(response);
-      for(let i=0; i<_drinks.length; i++){
-        // console.log(_drinks);
-        searchedAlcohol.push(_drinks[i].strDrinkThumb);
-      }
-      console.log(searchedAlcohol);
       const img = $(".card-img");
-      img.attr("src", searchedAlcohol[0]);
+      img.attr("src", response.drinks[0].strDrinkThumb);
     });
 
-
   })
-
-    
 })
