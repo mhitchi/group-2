@@ -46,7 +46,6 @@ $(document).ready(function(){
       console.log(response);
       console.log("adding recipe");
     });
-    drinkImg();
   })
 
   $("#searchAlcBtn").on("click", function(event) {
