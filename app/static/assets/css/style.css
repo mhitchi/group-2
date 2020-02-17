@@ -11,10 +11,26 @@ body {
   background-image: url("../images/bar-pic.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Rubik', sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+.nav {
+  /* margin-top: 1em; */
+}
+
+.nav-item {
+  margin-right: 1em;
+  margin-top: 1.5em;
+}
+
+select {
+  /* margin-top: 1em; */
+  height: 40px;
+  color: grey;
 }
 
 a {
@@ -31,26 +47,16 @@ a:hover {
   margin: 12em auto 10em auto;
 }
 
-/* .view-btn {
-  background-color: #F78166;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  width: 40px;
-  height: 30px;
-  float: right;
-  margin-right: 5px;
-  margin-top: -34px;
-  position: relative; 
-  z-index: 2;
-} */
 .view-btn {
   background-color: #E4424D;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   position: relative; 
-  margin-right: 5px;
+  margin-right: 15px;
+  padding: 5px;
+  height: 50px;
+  width: 150px;
 }
 
 .view-btn:hover {
@@ -59,26 +65,16 @@ a:hover {
   border: none;
 }
 
-/* .add-btn {
-  background-color: #F78166;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  width: 40px;
-  height: 30px;
-  float: right;
-  margin-right: 5px;
-  margin-top: -34px;
-  position: relative; 
-  z-index: 2;
-} */
 .add-btn {
   background-color: #E4424D;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   position: relative; 
-  margin-left: 5px;
+  margin-left: 15px;
+  padding: 5px;
+  height: 50px;
+  width: 150px;
 }
 
 .add-btn:hover {
@@ -89,7 +85,7 @@ a:hover {
 
 .menu {
   margin: auto;
-  width: 90%;
+  width: 100%;
   display: inline;
   border-radius: 7px;
   border: 1px solid #E3A899;
@@ -184,11 +180,21 @@ form {
   background-color: #E8BC65;
 }
 
+.recipe-list {
+  margin-top: 10em;
+}
+
+.recipe-row {
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 .footer {
   text-align: right;
   margin-right: -5em;
   margin-bottom: 1em;
-  margin-top: 10em;
+  margin-top: 30em;
 }
 
 .footer a {
