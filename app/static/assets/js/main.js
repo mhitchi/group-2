@@ -10,7 +10,7 @@ $(document).ready(function(){
   let alcName = "";
   let newRecipe = {};
   let searchedAlcohol = [];
-  let _drinks;
+  let _drinks =[];
 
   $mainAlc.on('click', function() {
     alcName = this.id;
@@ -74,13 +74,15 @@ $(document).ready(function(){
       url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchAlc,
       method: 'GET',
     }).then(function(response) {
-      let _drinks = response.drinks;
+      _drinks = response.drinks;
       // console.log(response);
       for(let i=0; i<_drinks.length; i++){
         // console.log(_drinks);
         searchedAlcohol.push(_drinks[i].strDrinkThumb);
       }
       console.log(searchedAlcohol);
+      const img = $(".card-img");
+      img.attr("src", searchedAlcohol[0]);
     });
 
 
