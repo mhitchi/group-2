@@ -1,32 +1,78 @@
 <div class="container">
   <div class="row">
     {{!-- nav bar --}}
-    <ul class="nav nav-pills">
-      <li class="nav-item">
+    <ul class="nav nav-pills col-12">
+      <div class="col-6">
+        <li class="nav-item">
         <a href="/" class-"nav-link">Home</a>
-      </li>
-      <li class="nav-item"><a href="../../form"  class-"nav-link">+</a></li>
-      <li class="nav-item"><a href="recipes" class-"nav-link">My Recipes</a></li>
+        </li>
+        <li class="nav-item"><a href="../../form" class-"nav-link">+</a></li>
+        <li class="nav-item"><a href="recipes" class-"nav-link">My Recipes</a></li>
+      </div>
+
+      <div class="col-6">
+        <select class="alcoholSearch">
+          <option selected id="searchAlc" value="base">Please Select Alcohol</option>
+          <option id="vodka" value="vodka">Vodka</option>
+          <option id="whiskey" value="whiskey">Whiskey</option>
+          <option id="bourbon" value="bourbon">Bourbon</option>
+          <option id="scotch" value="scotch">Scotch</option>
+          <option id="tequila" value="tequila">Tequila</option>
+          <option id="gin" value="gin">Gin</option>
+          <option id="rum" value="rum">Rum</option>
+        </select>
+        <button class="btn btn-outline-secondary" type="button" id="searchAlcBtn">Search</button>
+      </div>
     </ul>
   </div>
-
+  
+   <div id="alcoholSearchRow" class="row">
+      <div class="col-12"> 
+        {{!-- <select class="alcoholSearch">
+          <option selected id="searchAlc" value="base">Please Select Alcohol</option>
+          <option id="vodka" value="vodka">Vodka</option>
+          <option id="whiskey" value="whiskey">Whiskey</option>
+          <option id="bourbon" value="bourbon">Bourbon</option>
+          <option id="scotch" value="scotch">Scotch</option>
+          <option id="tequila" value="tequila">Tequila</option>
+          <option id="gin" value="gin">Gin</option>
+          <option id="rum" value="rum">Rum</option>
+        </select>
+        <button class="btn btn-outline-secondary" type="button" id="searchAlcBtn">Search</button> --}}
+      </div>
+    </div>
+    
   <div class="row">
     {{!-- display all recipes --}}
-    <div class="recipe-list">
+    <div class="recipe-list col-12">
       {{!-- TRIED {{#each Recipes}} --}}
       {{#each recipes}}
-        <div class="animated row recipe-row col-12 fadeInUp">
-        {{!-- recipe image --}}
-        <img src="../static/images/bar-pic.jpg">
+      <div class="animated recipe-row fadeInUp">
         {{!-- recipe info --}}
-        <h1>{{this.dataValues.name}}</h1>
-      {{/each}}
-      </div>
-      {{!-- {{/each}} --}}
-    </div>
-  </div>
-
-   {{!-- footer --}}
+        <div class="card">
+          {{!-- <div class="row no-gutters"> --}}
+            <div class="col-md-4">
+              <img src="" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title">{{this.dataValues.name}}</h2>
+                <h4>{{this.dataValues.main_oz}} {{this.dataValues.main_alc}}</h4>
+                <p class="card-text">{{this.dataValues.instructions}}</p>
+                    <p>{{this.dataValues.ing1}}</p>
+                    <p>{{this.dataValues.ing2}}</p>
+                    <p>{{this.dataValues.ing3}}</p>
+                    <p>{{this.dataValues.ing4}}</p>
+                    <p>{{this.dataValues.ing5}}</p>
+                    <p>{{this.dataValues.ing6}}</p>
+                </div>{{!--card-body --}}
+              </div>{{!--col-md-8 --}}
+            {{!-- </div> --}}{{!-- no-gutters --}}
+          </div>{{!--card --}}
+        </div>{{!-- animated --}}
+        {{/each}}
+      </div>{{!-- recipe-list --}}
+    </div>{{!-- row --}}
   <div class="footer">
     <div class="row">
       <div class="col-3 text-center">
@@ -41,7 +87,7 @@
       <div class="col-3 text-center">
         <a href="https://github.com/mhitchi/">May Hitchings</a>
       </div>
-      
+
     </div> {{!-- /row --}}
     <div class="row">
       <div class="col-12">

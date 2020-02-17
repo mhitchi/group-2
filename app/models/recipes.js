@@ -16,7 +16,7 @@ module.exports = function(sequelize, Datatypes){
       type: Datatypes.STRING,
       allowNull: false
     },
-    main_oz: Datatypes.INTEGER,
+    main_oz: Datatypes.DECIMAL,
     ing1: {
       type: Datatypes.STRING,
       allowNull: false

@@ -19,18 +19,13 @@ body {
 }
 
 .nav {
-  /* margin-top: 1em; */
+  margin-top: 1.5em;
 }
 
 .nav-item {
   margin-right: 1em;
-  margin-top: 1.5em;
-}
-
-select {
-  /* margin-top: 1em; */
-  height: 40px;
-  color: grey;
+  /* margin-top: 1.5em; */
+  display: inline;
 }
 
 a {
@@ -118,20 +113,21 @@ a:hover {
 @media (min-width: 500px) {
   .recipe-list {
     width: 100%;
-    margin: 0px auto 5em auto;
+    margin: 10em auto 5em auto;
     z-index: 0;
   }
 }
 @media (min-width: 992px) {
   .recipe-list {
     width: 80%;
-    margin: 0px auto 5em auto;
+    margin: 10em auto 5em auto;
     z-index: 0;
   }
 }
 
 .recipe-row {
   background-color: white;
+  width: 80%;
   border-radius: 20px;
   padding: 20px;
   margin: 10px auto 0px auto;
@@ -140,7 +136,7 @@ a:hover {
 }
 
 .recipe-row:hover {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 form {
@@ -156,19 +152,36 @@ form {
   margin-top: 1em;
 }
 
-.alcohol-menu {
+/* .alcohol-menu {
   height: 128px;
   width: 100%;
   overflow: scroll;
-}
+} */
 
 .ingInput {
   width: 100%;
 }
 
-.nav-link:active {
-  background-color: green;
+.mainOz {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border-color: #E8BC65;
 }
+
+.ingredients-list {
+  border-color: #E8BC65;
+}
+
+select {
+  border-color: #E8BC65;
+  color: grey;
+  height: 40px;
+}
+
+/* .nav-link:active {
+  background-color: green;
+} */
 
 .dropdown-item {
   width: 100%;
@@ -180,19 +193,29 @@ form {
   background-color: #E8BC65;
 }
 
-.recipe-list {
-  margin-top: 10em;
+.alcoholSearch {
+  /* margin-top: 2em; */
+  margin-left: 16em;
+  /* margin-right: 2em; */
+  /* margin-left: -15px; */
 }
 
-.recipe-row {
-  background-color: white;
-  margin-top: 10px;
-  padding: 10px;
+#searchAlcBtn {
+  color: white;
+  background-color: #E4424D;
+  border-color: white;
+  height: 40px;
+}
+
+#searchAlcBtn:hover {
+  cursor: pointer;
+  background-color: #EFAAAF;
+  border: none;
 }
 
 .footer {
   text-align: right;
-  margin-right: -5em;
+  /* margin-right: 5em; */
   margin-bottom: 1em;
   margin-top: 30em;
 }
@@ -206,4 +229,13 @@ form {
 .footer a:hover {
   color: #E3A899;
   text-decoration: none;
+}
+
+.footer p {
+  color: white;
+  margin-right: 1em;
+}
+
+#alcoholSearch {
+  text-align: center;
 }

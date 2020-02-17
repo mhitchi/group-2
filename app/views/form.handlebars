@@ -23,6 +23,7 @@
         <select class="alcohol">
           <option selected id="mainAlc" value="base">Please Select Alcohol</option>
           <option id="vodka" value="vodka">Vodka</option>
+          <option id="whiskey" value="whiskey">Whiskey</option>
           <option id="bourbon" value="bourbon">Bourbon</option>
           <option id="scotch" value="scotch">Scotch</option>
           <option id="tequila" value="tequila">Tequila</option>
@@ -30,14 +31,17 @@
           <option id="rum" value="rum">Rum</option>
         </select>
       </div>
+
+      <div class="col-2">
+        <input class="mainOz" type="text" placeholder=" oz" id="mainOz">
+      </div>
   
-      <div class="col-8">
+      <div class="col-6">
         <ul class="animated nav nav-pills">
           <li class="nav-item dropdown menu ingredients-list">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingredients</a>
             <div class="dropdown-menu ingredients-div">
-              <input class="ingInput" type="text" placeholder="2oz lime juice" id="mainOz">
-              <input class="ingInput" type="text" placeholder="" id="ing1">
+              <input class="ingInput" type="text" placeholder="eg: 4oz lime juice" id="ing1">
               <input class="ingInput" type="text" placeholder="" id="ing2">
               <input class="ingInput" type="text" placeholder="" id="ing3">
               <input class="ingInput" type="text" placeholder="" id="ing4">
