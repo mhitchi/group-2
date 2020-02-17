@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "root",
+=======
+    "password": "Blizzard_12",
+>>>>>>> da1fc0fc8da759a117ac6cc26f6baec3990ba509
     "database": "recipes",
     "host": "127.0.0.1",
     "dialect": "mysql",
