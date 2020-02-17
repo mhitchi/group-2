@@ -156,14 +156,29 @@ form {
   margin-top: 1em;
 }
 
-.alcohol-menu {
+/* .alcohol-menu {
   height: 128px;
   width: 100%;
   overflow: scroll;
-}
+} */
 
 .ingInput {
   width: 100%;
+}
+
+.mainOz {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border-color: #E8BC65;
+}
+
+.ingredients-list {
+  border-color: #E8BC65;
+}
+
+select {
+  border-color: #E8BC65;
 }
 
 .nav-link:active {
@@ -192,7 +207,7 @@ form {
 
 .footer {
   text-align: right;
-  margin-right: -5em;
+  /* margin-right: 5em; */
   margin-bottom: 1em;
   margin-top: 30em;
 }
@@ -206,4 +221,13 @@ form {
 .footer a:hover {
   color: #E3A899;
   text-decoration: none;
+}
+
+.footer p {
+  color: white;
+  margin-right: 1em;
+}
+
+#alcoholSearch {
+  text-align: center;
 }
