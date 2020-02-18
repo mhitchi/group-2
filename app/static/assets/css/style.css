@@ -37,6 +37,15 @@ a:hover {
   color: white;
 }
 
+#title {
+  /* font-family: ‘Germania One’, cursive;
+  font-size: 5em; */
+  font-family: ‘Righteous’, cursive;
+  font-size: 4em;
+  color: white;
+  margin: 2em auto 0em auto;
+}
+
 .button-row {
   width: 100%;
   margin: 12em auto 10em auto;
