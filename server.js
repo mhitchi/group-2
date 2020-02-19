@@ -37,7 +37,7 @@ require("./app/routes/html-routes")(app);
 require("./app/routes/api-routes")(app);
 //**********SYNC-DB***********************************************************************************//
 //wrap app listeners w/ db sync to ensure db is ready
-db.sequelize.sync({force:true}).then(()=>{
+db.sequelize.sync({}).then(()=>{
     app.listen(PORT, ()=>{
         console.log("App established on port:", PORT);
     });
