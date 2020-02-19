@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "052095Meg!",
+    "password": "root",
     "database": "recipes",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -20,6 +20,7 @@
     "password": "st1mdyfeclzlghzy",
     "database": "o7vyjfac4fivejin",
     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
   }
