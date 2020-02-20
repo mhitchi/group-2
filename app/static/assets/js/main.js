@@ -37,7 +37,7 @@ $(document).ready(function(){
     //get ingredient val
     //post recipe to db
     $.ajax({
-      url: 'http://localhost:8080/api/recipes',
+      url: '/api/recipes',
       method: 'POST',
       data: {
         newRecipe
@@ -51,7 +51,7 @@ $(document).ready(function(){
   $("#searchAlcBtn").on("click", function(event) {
     event.preventDefault();
     let searchAlc = $(".alcoholSearch option:selected").text();
-    $("#view").load("http://localhost:8080/recipes/"+searchAlc);
+    $("#view").load("/recipes/"+searchAlc);
 
     $.ajax({
       url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchAlc,

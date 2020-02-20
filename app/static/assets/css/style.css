@@ -40,7 +40,7 @@ a:hover {
 #title {
   /* font-family: ‘Germania One’, cursive;
   font-size: 5em; */
-  font-family: ‘Righteous’, cursive;
+  font-family: 'Righteous', cursive;
   font-size: 4em;
   color: white;
   margin: 2em auto 0em auto;
@@ -48,7 +48,7 @@ a:hover {
 
 .button-row {
   width: 100%;
-  margin: 12em auto 10em auto;
+  margin: 1em auto 10em auto;
 }
 
 .view-btn {
